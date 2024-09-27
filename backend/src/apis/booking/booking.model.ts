@@ -30,6 +30,11 @@ const bookingSchema = new  Schema<Booking>({
         trim: true,
         minlength :10,
         maxlength :15,
+        validate : {
+            validator : function(v : string) {
+                return /^(\+?\d{1, 3})?\d+$/.test(v);
+            }
+        }
     },
     date : {
         type : Date,
