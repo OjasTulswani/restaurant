@@ -55,8 +55,8 @@ const bookingSchema = new  Schema<Booking>({
     }, 
     status : {
         type: String,
-        default : 'active',
-        enum : ["active", "cancelled"],
+        default : 'pendeing',
+        enum : ["pendeing", "approved", "cancelled"],
     }
 })
 
