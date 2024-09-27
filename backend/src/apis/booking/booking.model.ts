@@ -14,32 +14,44 @@ const bookingSchema = new  Schema<Booking>({
     name : {
         type: String,
         required: true,
+        trim: true,
+        minlength : 3,
+        maxlength : 50,
 
     },
     email : {
         type: String,
         required: true,
-
+        trim: true,
     },
     phone : {
         type: String,
         required: true,
+        trim: true,
+        minlength :10,
+        maxlength :15,
     },
     date : {
         type : Date,
         required: true,
+        trim: true,
     },
     time : {
         type: String,
         required: true,
+        trim: true,
     },
     personNumber : {
         type : Number,
         required: true,
+        trim: true,
+        minlength : 1,
+        maxlength : 20,
     }, 
     status : {
         type: String,
         default : 'active',
+        enum : ["active", "cancelled"],
     }
 })
 
