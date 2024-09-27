@@ -7,6 +7,7 @@ interface Booking {
     date: Date;
     time: string;
     personNumber: number;
+    status: string;
 }
 
 const bookingSchema = new  Schema<Booking>({
@@ -18,6 +19,7 @@ const bookingSchema = new  Schema<Booking>({
     email : {
         type: String,
         required: true,
+
     },
     phone : {
         type: String,
@@ -34,6 +36,10 @@ const bookingSchema = new  Schema<Booking>({
     personNumber : {
         type : Number,
         required: true,
+    }, 
+    status : {
+        type: String,
+        default : 'active',
     }
 })
 

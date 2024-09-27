@@ -6,4 +6,6 @@ const bookingRouter = express.Router();
 
 bookingRouter.post("/", BookingController.bookTable);
 
+bookingRouter.put('/:id', BookingController.cancelBooking);
+
 export default bookingRouter;
