@@ -1,15 +1,13 @@
 import './App.css'
 import Header from './components/layouts/Header'
-
+import Home from './pages/home'
 function App() {
   
 
   return (
     <>
     <Header /> 
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <Home />
     </>
   )
 }
