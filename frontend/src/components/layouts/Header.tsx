@@ -59,7 +59,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="block text-xl py-2 px-3 text-white bg-orange-400 rounded md:bg-transparent md:text-orange-400 md:p-0 "  
+                className="block text-xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "  
               >
                 Menu
               </a>

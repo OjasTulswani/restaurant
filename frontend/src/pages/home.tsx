@@ -11,8 +11,8 @@ const home = () => {
             We provide the best food for you
           </h1>
           <p className="text-gray-600 font-sans mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div className="flex flex-col md:flex-row lg:flex-row gap-4 items-center md:items-start lg:items-start">
             <SecondaryButton title="Menu" />
