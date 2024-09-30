@@ -6,16 +6,16 @@ const Header = () => {
 
   
   return (
-    <nav className="bg-white w-full z-20 top-0 start-0 border-b border-gray-200 ">
+    <nav className="bg-white w-full  top-0 start-0 border-b border-gray-200 ">
 
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="flex justify-between items-center h-16">
         <a
           href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
+          className="ml-8"
         >
           <img
             src={logo}
-            className="h-15"
+            className="h-10 w-36"
             alt="Logo"
           />
           
@@ -59,7 +59,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="block text-2xl py-2 px-3 text-white bg-orange-400 rounded md:bg-transparent md:text-orange-400 md:p-0 "  
+                className="block text-xl py-2 px-3 text-white bg-orange-400 rounded md:bg-transparent md:text-orange-400 md:p-0 "  
               >
                 Menu
               </a>
@@ -67,7 +67,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="block text-2xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "
+                className="block text-xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "
               >
                 Events
               </a>
@@ -75,7 +75,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="block text-2xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0"
+                className="block text-xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0"
               >
                 Gallery
               </a>
@@ -83,7 +83,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="block text-2xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "
+                className="block text-xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "
               >
                 About
               </a>
@@ -91,7 +91,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="block text-2xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "
+                className="block text-xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "
               >
                 Contact
               </a>

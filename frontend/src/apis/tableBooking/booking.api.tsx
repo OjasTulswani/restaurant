@@ -11,7 +11,7 @@ interface BookingInputType {
     status: string;
 }
 
-export async function createBooking(booking :  BookingInputType) {
+export async function createBooking(booking : BookingInputType) {
     return axios.post('/booking', booking)
 }
 
