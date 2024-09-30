@@ -1,5 +1,5 @@
 import { ImageContext } from "../../context/imageContextProvider";
-import MenuImage from "../../assets/menuImage";
+import MenuImage from "../../assets/MenuImage";
 import { useContext } from "react";
 
 const MenuSlider = () => {

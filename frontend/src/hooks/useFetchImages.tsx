@@ -15,7 +15,7 @@ const useFetchImages = () => {
       try {
         const promises = [];
         for (let i = 1; i <= 15; i++) {
-          const url = `https://foodish-api.com/images/dosa/dosa${i}.jpg`;
+          const url = `https://foodish-api.com/images/pasta/pasta${i}.jpg`;
           promises.push(axios.get(url));
         }
         const responses = await Promise.all(promises);
