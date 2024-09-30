@@ -2,11 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { BookingProvider } from './context/tableBookingContextProvider.tsx'
+import { HttpMethodContextProvider } from './context/HttpMethodProvider.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BookingProvider>
+    <HttpMethodContextProvider>
       <App />
-    </BookingProvider>
+    </HttpMethodContextProvider>
   </StrictMode>,
 )

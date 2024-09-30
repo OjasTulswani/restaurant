@@ -1,20 +1,20 @@
-import axios from "../baseUrl/url"
-// import BookingInputType from "../../context/tableBookingContextProvider"
+// import axios from "../baseUrl/AxiosService"
+// // import BookingInputType from "../../context/tableBookingContextProvider"
 
-interface BookingInputType {
-    name: string;
-    email: string;
-    phone: string;
-    date: Date;
-    time: string;
-    personNumber: number;
-    status: string;
-}
+// interface BookingInputType {
+//     name: string;
+//     email: string;
+//     phone: string;
+//     date: Date;
+//     time: string;
+//     personNumber: number;
+//     status: string;
+// }
 
-export async function createBooking(booking : BookingInputType) {
-    return axios.post('/booking', booking)
-}
+// export async function createBooking(booking : BookingInputType) {
+//     return axios.post('/booking', booking)
+// }
 
-export async function cancelBooking(bookingId : string) {
-    return axios.delete(`/booking/${bookingId}/cancel`)
-}
+// export async function cancelBooking(bookingId : string) {
+//     return axios.delete(`/booking/${bookingId}/cancel`)
+// }

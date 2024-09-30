@@ -1,9 +1,11 @@
-import { ImageContext } from "../../context/imageContextProvider";
+// import { useImageContext } from "../../context/imageContextProvider";
 import MenuImage from "../../assets/MenuImage";
-import { useContext } from "react";
+// import { useContext } from "react";
+import useFetchImages from "../../hooks/useFetchImages";
 
 const MenuSlider = () => {
-  const { images, loading } = useContext(ImageContext);
+  // const { images, loading } = useContext(ImageContext);
+  const {loading, images} = useFetchImages();
 
   if (loading) {
     return <div>Loading...</div>;
