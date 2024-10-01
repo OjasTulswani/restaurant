@@ -1,7 +1,8 @@
+
 import './App.css'
 
 import Header from './components/layouts/Header'
-
+import Footer from './components/layouts/Footer'
 import ChefSection from './pages/ChefSection'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
@@ -16,7 +17,7 @@ function App() {
     <Menu />
     <ChefSection />
     <Testimonial />
-    
+    <Footer />
     </>
   )
 }

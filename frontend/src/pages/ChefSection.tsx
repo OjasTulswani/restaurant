@@ -24,13 +24,8 @@ const ChefSection = () => {
           </div>
         </div>
 
-        
         <div className="lg:w-1/2 lg:ml-16 mt-10 lg:mt-0 relative">
-          <img
-            src={chef}
-            alt="Chef"
-            className="relative"
-          />
+          <img src={chef} alt="Chef" className="relative" />
         </div>
       </div>
     </section>

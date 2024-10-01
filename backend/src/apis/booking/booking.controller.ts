@@ -1,6 +1,4 @@
 import { RequestHandler } from "express";
-import mongoose from "mongoose";
-
 import BookingModel from "./booking.model";
 
 export const bookTable: RequestHandler = async (req, res) => {
@@ -27,20 +25,27 @@ export const bookTable: RequestHandler = async (req, res) => {
 };
 
 export const cancelBooking: RequestHandler = async (req, res) => {
-  const id = req.params.id;
+
+  const { name, email, phone, date, time, personNumber } = req.body;
+
   try {
-    if (!mongoose.isValidObjectId(id)) {
-      res.status(404).send({ message: "Invalid" });
+    const booking = await BookingModel.findOne({name, email, phone, date, time, personNumber, status : "pendeing"})
+
+    if(!booking){
+       res.status(404).json({ success: false, errorMsg: "Booking not found" });
     }
-    const booking = await BookingModel.findById(id);
-    if (!booking) {
-      res.status(404).send({ message: "Booking not found" });
+    if(booking){
+      booking.status = "cancelled";
+      await booking.save();
+  
     }
-    booking!.status = "cancelled";
-    await booking!.save();
+
+    
     res.status(200).send({ message: "Booking cancelled successfully" });
+
   } catch (error) {
+
     res.status(500).send({ message: "Booking error", error: error });
+    
   }
 };
-

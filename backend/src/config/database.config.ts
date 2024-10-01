@@ -1,9 +1,6 @@
 import mongoose from "mongoose";
 import env from './env.var.config'
 
-
-
-
 const connectDB = async () : Promise<void> => {
     try {
         await mongoose.connect(env.db.dbconnection!)

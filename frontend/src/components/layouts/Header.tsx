@@ -1,30 +1,17 @@
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg";
 import BookTable from "../common/BookTable";
 
-
 const Header = () => {
-
-  
   return (
     <nav className="bg-white w-full  top-0 start-0 border-b border-gray-200 ">
-
       <div className="flex justify-between items-center h-16">
-        <a
-          href="/"
-          className="ml-8"
-        >
-          <img
-            src={logo}
-            className="h-10 w-36"
-            alt="Logo"
-          />
-          
+        <a href="/" className="ml-8">
+          <img src={logo} className="h-10 w-36" alt="Logo" />
         </a>
 
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          
-          <BookTable  />
-          
+          <BookTable />
+
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -59,7 +46,7 @@ const Header = () => {
             <li>
               <a
                 href="#menu"
-                className="block text-xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "  
+                className="block text-xl py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-400 md:p-0 "
               >
                 Menu
               </a>

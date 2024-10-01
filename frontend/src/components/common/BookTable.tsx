@@ -5,7 +5,7 @@ import useBookingTableApi from "../../hooks/apis/tableBooking/useBookingTableApi
 import { BookingType } from "../../types/Booking";
 
 const BookTable = () => {
-  const {createBooking} = useBookingTableApi();
+  const { createBooking } = useBookingTableApi();
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
@@ -17,12 +17,10 @@ const BookTable = () => {
     setIsModalOpen(false);
   };
 
-  
-
-  const handleSubmit = async (values : BookingType["booking"]) => {
+  const handleSubmit = async (values: BookingType["booking"]) => {
     setIsModalOpen(false);
     const response = await createBooking(values);
-    console.log(response)
+    console.log(response);
   };
 
   return (
@@ -60,10 +58,9 @@ const BookTable = () => {
             rules={[
               { required: true, message: "Please input your phone number!" },
               {
-                pattern:  /^\d{10,15}$/,
+                pattern: /^\d{10,15}$/,
                 message: "Phone number should be 10-15 digits!",
               },
-              
             ]}
           >
             <Input type="number" />
@@ -93,7 +90,7 @@ const BookTable = () => {
                 required: true,
                 message: "Please input the number of persons!",
               },
-              
+
               { min: 1, message: "Number of persons should be at least 1!" },
             ]}
           >
