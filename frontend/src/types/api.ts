@@ -9,5 +9,5 @@ export type ApiResponseData = {
     errorMsg: string;
     response: object | Array<object>;
     meta? : ApiMeta
-  };
+};
 

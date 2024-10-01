@@ -1,6 +1,6 @@
 import { createContext, ReactElement} from "react";
-import useFetchImages from "../hooks/useFetchImages";
-import { Image } from "../hooks/useFetchImages";
+import useFetchImages from "../hooks/apis/fetchImages/useFetchImages";
+import { Image } from "../hooks/apis/fetchImages/useFetchImages";
 
 interface ImageContext {
     images : Image[];
@@ -24,4 +24,4 @@ const ImageProvider = ({children} : ChildrenType) =>{
     )
 }
 
-export {ImageContext, ImageProvider}
+export  {ImageContext, ImageProvider}

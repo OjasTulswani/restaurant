@@ -1,12 +1,12 @@
 import { PrimaryButton, SubmitButton } from "./Button";
 import { useState } from "react";
-// import { useContext } from "react";
 import { Modal, Form, Input, DatePicker, TimePicker } from "antd";
-// import { BookingInputType, BookingContext } from "../../context/tableBookingContextProvider";
-import useBookingTableApi from "../../hooks/apis/TableBooking/useBookingTableApi";
-import { ApiResponseData } from "../../types/api";
+import useBookingTableApi from "../../hooks/apis/tableBooking/useBookingTableApi";
+import { BookingType } from "../../types/Booking";
 
 const BookTable = () => {
+  const {createBooking} = useBookingTableApi();
+
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const showModal = () => {
@@ -17,13 +17,12 @@ const BookTable = () => {
     setIsModalOpen(false);
   };
 
-  // const {createBooking} = useContext(BookingContext);
-  const {createBooking} = useBookingTableApi();
+  
 
-  const handleSubmit = (values : ApiResponseData) => {
+  const handleSubmit = async (values : BookingType["booking"]) => {
     setIsModalOpen(false);
-    createBooking(values)
-    console.log(values);
+    const response = await createBooking(values);
+    console.log(response)
   };
 
   return (

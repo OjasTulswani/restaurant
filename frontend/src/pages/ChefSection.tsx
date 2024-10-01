@@ -29,7 +29,7 @@ const ChefSection = () => {
           <img
             src={chef}
             alt="Chef"
-            className="relative rounded-lg shadow-lg"
+            className="relative"
           />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import AxiosService from "../apis/baseUrl/AxiosService";
+import AxiosService from "../axiosService/baseUrl/AxiosService";
 import { createContext, useState, useCallback, useContext } from "react";
 import { ApiResponseData } from "../types/api";
 
@@ -35,7 +35,7 @@ const createApiErrorResponse = (error: unknown): ApiResponseData => {
       errorMsg = error.message;
     }
   
-    return { success: false, errorMsg, response: {} };
+    return { success: false, errorMsg, response : {} };
 };
 
 type ChildrenType = { children: React.ReactNode }

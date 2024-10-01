@@ -1,7 +1,7 @@
 // import { useImageContext } from "../../context/imageContextProvider";
 import MenuImage from "../../assets/MenuImage";
 // import { useContext } from "react";
-import useFetchImages from "../../hooks/useFetchImages";
+import useFetchImages from "../../hooks/apis/fetchImages/useFetchImages";
 
 const MenuSlider = () => {
   // const { images, loading } = useContext(ImageContext);
@@ -11,7 +11,7 @@ const MenuSlider = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="flex flex-nowrap overflow-x-auto">
+    <div className="flex flex-nowrap overflow-x-auto scrollbar-hidden">
       {images.map((image, index) => (
         <MenuImage key={index} url={image.url} />
       ))}
