@@ -1,7 +1,7 @@
 import express, { Express } from "express";
 import morgan from "morgan"
 import cors from "cors"
-import {bookingRouter, testimonialRouter} from './apis'
+import {bookingRouter, testimonialRouter, emailRouter} from './apis'
 
 const app : Express = express()
 
@@ -15,5 +15,6 @@ app.use(cors());
 
 app.use("/api/booking", bookingRouter);
 app.use("/api/testimonials", testimonialRouter);
+app.use("/api/email", emailRouter)
 
 export default app;

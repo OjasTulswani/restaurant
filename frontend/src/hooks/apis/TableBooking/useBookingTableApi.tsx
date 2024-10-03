@@ -5,7 +5,7 @@ import { ApiResponseData } from "../../../types/api";
 type Datatype = BookingType["booking"];
 
 const useBookingTableApi = () => {
-  const { post, delete : deleteMethod } = useHttpMethodContext();
+  const { post } = useHttpMethodContext();
 
   const createBooking = async (
     data: Datatype,

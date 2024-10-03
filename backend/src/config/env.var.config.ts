@@ -8,5 +8,9 @@ export default {
     }, 
     db : {
         dbconnection : (process.env.MONGO_CONNECTION_STRING)
+    },
+    sendGrid : {
+        api : String(process.env.SENDGRID_API_KEY),
+        templateId : String(process.env.SENDGRID_templateId)
     }
 }
